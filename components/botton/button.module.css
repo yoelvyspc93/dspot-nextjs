@@ -1,0 +1,42 @@
+.btn {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  gap: 8px;
+  height: 40px;
+  border: 1px solid #0637F9;
+  border-radius: 4px;
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.btnPrimary {
+  background: #2E57FA;
+}
+
+.btnPrimary:hover {
+  background: #0637F9;
+}
+
+.btnPrimary:active {
+  background: #052DCC
+}
+
+.btn[disabled] {
+  cursor: default;
+  color: #AAAFBD;
+  background: #F8F8FA;
+  border: 1px solid #D0D3DA;
+}
+
+.btn[disabled]:hover {
+  background: #F8F8FA;
+}
