@@ -1,0 +1,15 @@
+.img {
+	position: relative;
+	box-sizing: border-box;
+}
+
+.img > .badge {
+  position: absolute;
+  top: -6px;
+  left: -5px;
+  z-index: 1;
+}
+
+.img > img{
+	border-radius: 4px;
+}
