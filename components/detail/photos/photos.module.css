@@ -1,0 +1,28 @@
+.photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  
+}
+
+.photos span {
+  border-radius: 4px;
+  width: 136px;
+  height: 136px;
+  background-color: black;
+}
+
+
+.photos span img {
+  object-fit: fill;
+  background: black;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .5s ease;
+
+}
+
+
+.photos span:hover img {
+  opacity: .6;
+} 
