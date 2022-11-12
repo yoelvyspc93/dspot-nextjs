@@ -1,0 +1,21 @@
+.icon {
+  cursor: pointer;
+  display: inline-flex;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 8px;
+}
+
+.icon > img {
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.icon_arrow_black {
+  background: #FFFFFF;
+}
+
+.icon.icon_close {
+  background: rgba(255, 255, 255, 0.1);
+}
