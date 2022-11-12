@@ -1,0 +1,77 @@
+.container{
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(100% - 726px);
+  height: calc(100vh - 390px);
+  border-radius: 8px;
+}
+
+.title {
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 24px;
+  padding: 30px 0px 0px 40px;
+  display: flex;
+  align-items: center;
+  color: #B1B9DB;
+  margin-bottom: 24px;
+}
+
+.list_friends {
+  display: flex;
+	flex-direction: column;
+  box-sizing: border-box;
+  overflow-y: auto;
+  width: 100%;
+  padding: 0px 40px 14px 40px;
+}
+
+.list_friends::-webkit-scrollbar {
+  background: rgba(177, 185, 219, 0.3);
+  border-radius: 8px;
+}
+
+.list_friends::-webkit-scrollbar:vertical {
+  width:5px;
+}
+
+.list_friends::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.list_friends::-webkit-scrollbar-thumb {
+  background: #B1B9DB;
+  border-radius: 8px;
+}
+
+.list_friends::-webkit-scrollbar-track {
+  border-radius: 8px;  
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .container{
+    width: calc(100% - 350px);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container{
+    width: calc(100% - 250px);
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .container{
+    width: calc(100%);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .container{
+    width: calc(100%);
+  }
+}
