@@ -1,14 +1,16 @@
+import { Inter } from '@next/font/google'
 import './globals.css'
 
-export default function RootLayout({ children }) {
+const font = Inter({
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
+  variable: '--inter-font'
+})
+
+export default function RootLayout ({ children }) {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body>{children}</body>
+    <html lang='en'>
+      <body className={font.variable}>{children}</body>
     </html>
   )
 }
