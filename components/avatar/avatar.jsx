@@ -8,9 +8,9 @@ export default function Avatar ({ available, img, imgDimension, statusDimension,
     <div {...props}>
       <div className={styles.img}>
         <span className={styles.badge}>
-          <Image src={active} alt='badge available' width={statusDimension} height={statusDimension} />
+          <Image src={active} alt='badge available' width={statusDimension} height={statusDimension} priority />
         </span>
-        <Image src={img} alt='avatar' width={imgDimension} height={imgDimension} />
+        <Image src={img} alt='avatar' width={imgDimension} height={imgDimension} priority />
       </div>
     </div>
   )

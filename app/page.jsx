@@ -1,12 +1,13 @@
-import styles from './page.module.css'
 import { List } from 'components'
-
-import frineds from 'constant/frineds'
+import { getFriendsAll } from 'services/friends'
+import styles from 'styles/page.module.css'
 
 export default function Home () {
+  const frineds = getFriendsAll()
+
   return (
-    <div className={styles.container}>
-      <List data={frineds} />
+    <div className={styles.page}>
+      <List title='Friends' data={frineds} />
     </div>
   )
 }

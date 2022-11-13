@@ -6,11 +6,6 @@
 .badge > div {
 	padding: 0px 8px;
 	box-sizing: border-box;
-	font-family: var(--inter-font);
-	font-style: normal;
-	font-weight: 500;
-	font-size: 12px;
-	line-height: 24px;
 	display: flex;
 	align-items: center;
 	color: #b1b9db;

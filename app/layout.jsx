@@ -1,5 +1,5 @@
 import { Inter } from '@next/font/google'
-import './globals.css'
+import 'styles/globals.css'
 
 const font = Inter({
   weight: ['400', '500', '700'],
@@ -10,7 +10,9 @@ const font = Inter({
 export default function RootLayout ({ children }) {
   return (
     <html lang='en'>
-      <body className={font.variable}>{children}</body>
+      <body className={font.variable}>
+        {children}
+      </body>
     </html>
   )
 }

@@ -22,11 +22,6 @@
 }
 
 .info > .title {
-	font-family: var(--inter-font);
-	font-style: normal;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 24px;
 	margin-top: 18px;
 	margin-bottom: 4px;
 }
@@ -34,4 +29,8 @@
 .card_footer {
 	align-items: center;
   margin: 24px;
+}
+
+.card_footer a {
+	text-decoration: none;
 }

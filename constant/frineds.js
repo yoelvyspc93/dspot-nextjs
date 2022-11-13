@@ -1,4 +1,4 @@
-const frineds = [
+const friends = [
   {
     id: 1,
     img: '/asset/images/avatar.png',
@@ -97,4 +97,4 @@ const frineds = [
   }
 ]
 
-export default frineds
+export default friends
