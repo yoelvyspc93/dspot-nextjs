@@ -1,21 +1,16 @@
-/* global describe it expect */
+/* global describe it expect jest */
 
-import { render, screen } from '@testing-library/react'
-import Button from './button'
+import { fireEvent, render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
+import { Button } from 'components'
 
 describe('Button', () => {
-  it('render button component', () => {
-    render(<Button color='primary'>Detail</Button>)
+  it('render button component, test enabled and disabled properties', () => {
+    const mockHandler = jest.fn()
 
-    const button = screen.getByRole('button', { name: 'Detail' })
-    expect(button).toBeInTheDocument()
-  })
-
-  it('render button enable and disabled', () => {
     render(
       <>
-        <Button color='primary'>Enable</Button>
+        <Button color='primary' onClick={mockHandler}>Enable</Button>
         <Button color='primary' disabled>Disabled</Button>
       </>
     )
@@ -23,7 +18,13 @@ describe('Button', () => {
     const buttonEnable = screen.getByRole('button', { name: 'Enable' })
     const buttonDisabled = screen.getByRole('button', { name: 'Disabled' })
 
+    expect(buttonEnable).toBeInTheDocument()
+    expect(buttonDisabled).toBeInTheDocument()
+
     expect(buttonEnable).not.toBeDisabled()
     expect(buttonDisabled).toBeDisabled()
+
+    fireEvent.click(buttonEnable)
+    expect(mockHandler).toHaveBeenCalledTimes(1)
   })
 })
