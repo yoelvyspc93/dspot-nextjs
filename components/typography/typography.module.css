@@ -1,0 +1,29 @@
+.typography {
+  font-family: var(--inter-font);
+  font-style: normal;
+  line-height: 24px;
+}
+
+.title {
+  font-size: 26px;                 
+} 
+
+.body {
+  font-size: 16px;
+}
+
+.small {
+  font-size: 12px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.regular {
+  font-weight: 400;
+}
