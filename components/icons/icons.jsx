@@ -15,7 +15,7 @@ export function IconClose (props) {
   return (
     <div {...props}>
       <span className={`${styles.icon} ${styles.icon_close}`}>
-        <Image src='/asset/svg/close.svg' alt='icon_close' width={24} height={24} />
+        <Image src='/asset/svg/close.svg' alt='icon-close' width={24} height={24} />
       </span>
     </div>
 

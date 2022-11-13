@@ -1,42 +1,42 @@
-import { Divider } from 'components'
+import { Divider, Typography } from 'components'
 import styles from './info.module.css'
 
 export default function DetailInfo ({ info }) {
   return (
     <div className={styles.card}>
       <div className={styles.bio}>
-        <div className={styles.typography_title}>
+        <Typography body medium className={styles.typography_title}>
           Bio:
-        </div>
-        <div className={styles.typography_description}>
+        </Typography>
+        <Typography body regular className={styles.typography_description}>
           {info.bio}
-        </div>
+        </Typography>
       </div>
       <Divider />
       <div className={styles.phone}>
-        <div className={styles.typography_title}>
+        <Typography body medium className={styles.typography_title}>
           Phone:
-        </div>
-        <div className={styles.typography_description}>{info.phone}</div>
+        </Typography>
+        <Typography body medium className={styles.typography_description}>{info.phone}</Typography>
       </div>
       <Divider />
       <div className={styles.more}>
-        <div className={styles.typography_title}>
+        <Typography body medium className={styles.typography_title}>
           Address:
-        </div>
-        <div className={styles.typography_description}>{info.adderss}</div>
-        <div className={styles.typography_title}>
+        </Typography>
+        <Typography body medium className={styles.typography_description}>{info.address_1}</Typography>
+        <Typography body medium className={styles.typography_title}>
           City:
-        </div>
-        <div className={styles.typography_description}>{info.city}</div>
-        <div className={styles.typography_title}>
+        </Typography>
+        <Typography body medium className={styles.typography_description}>{info.city}</Typography>
+        <Typography body medium className={styles.typography_title}>
           State:
-        </div>
-        <div className={styles.typography_description}>{info.state}</div>
-        <div className={styles.typography_title}>
+        </Typography>
+        <Typography body medium className={styles.typography_description}>{info.state}</Typography>
+        <Typography body medium className={styles.typography_title}>
           Zipcode
-        </div>
-        <div className={styles.typography_description}>{info.zipcode}</div>
+        </Typography>
+        <Typography body medium className={styles.typography_description}>{info.zipcode}</Typography>
       </div>
     </div>
   )
