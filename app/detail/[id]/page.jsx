@@ -2,9 +2,8 @@ import { DetailHeader } from 'components'
 import { getFriendById } from 'services/friends'
 import styles from 'styles/page.module.css'
 
-export default function Detail ({ params }) {
-  const { id } = params
-  const friend = getFriendById({ id })
+export default async function Detail ({ params: { id } }) {
+  const friend = await getFriendById({ id })
 
   return (
     <div className={styles.page}>
