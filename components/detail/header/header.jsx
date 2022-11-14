@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 
 import { Avatar, Badge, IconArrowBlack, DetailInfo, DetailPhotos } from 'components'
 import styles from './header.module.css'
@@ -25,7 +25,9 @@ export default function DetailHeader ({ data }) {
           <Avatar available={info.available} img={info.img} imgDimension={150} statusDimension={23} />
           <div className={styles.info}>
             <div className={styles.title}>{info.first_name} {info.last_name}</div>
-            <Badge>{statuses[0]}</Badge>
+            <div className={styles.badge_list}>
+              {statuses.map((status, index) => <Badge key={index}>{status}</Badge>)}
+            </div>
           </div>
         </div>
         <div className={styles.body}>
@@ -40,10 +42,14 @@ export default function DetailHeader ({ data }) {
             </div>
             <div className={styles.tab_body}>
               <div className={`${styles.tab_body_info} ${tab !== 1 && styles.tab_body_hidden}`}>
-                <DetailInfo info={info} />
+                <Suspense fallback={<h1>Loading...</h1>}>
+                  <DetailInfo info={info} />
+                </Suspense>
               </div>
               <div className={`${styles.tab_body_photo} ${tab !== 2 && styles.tab_body_hidden}`}>
-                <DetailPhotos photos={photos} onClick={openPhoto} />
+                <Suspense fallback={<h1>Loading...</h1>}>
+                  <DetailPhotos photos={photos} onClick={openPhoto} />
+                </Suspense>
               </div>
             </div>
           </div>

@@ -4,7 +4,6 @@ export default function Typography (props) {
   const {
     title,
     body,
-    h3,
     small,
     bold,
     medium,
