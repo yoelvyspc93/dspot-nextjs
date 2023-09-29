@@ -1,0 +1,22 @@
+name: Mostrar información del repositorio
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  show-repository-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Show repository information
+        run: |
+          echo "Descargas:"
+          echo "\${{ github.repository }} ha sido descargado \${{ github.event.repository.stargazers_count }} veces."
+          echo "Usuarios:"
+          echo "\${{ github.event.repository.forks_count }} usuarios han marcado con una estrella \${{ github.repository }}."
+          echo "Estrellas:"
+          echo "\${{ github.event.repository.watchers_count }} estrellas en \${{ github.repository }}."
+
